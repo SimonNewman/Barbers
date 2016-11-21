@@ -7,7 +7,7 @@ body {
 }
 
 .top {
-  height: 150px;
+  height: 250px;
   line-height: 150px;
   font-size: 1.2em;
   letter-spacing: 0.05em;
@@ -22,7 +22,7 @@ body {
 }
 
 #logo {
-  width: 150px;
+  width: 250px;
   display: block;
   margin: 35px auto 0 auto;
 }
