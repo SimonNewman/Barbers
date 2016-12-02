@@ -1,0 +1,186 @@
+@mixin xs {
+  @media (max-width: 768px) { @content; }
+}
+@mixin sm {
+  @media (min-width: 768px) { @content; }
+}
+@mixin md {
+  @media (min-width: 992px) { @content; }
+}
+@mixin lg {
+  @media (min-width: 1200px) { @content; }
+}
+
+@mixin justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+  line-height: 1.9em;
+  /*background: url("../images/shave-feature-2.jpg") center 0px fixed;
+  background-size: cover;*/
+  background: #222;
+}
+
+h1 {
+  font-size: 1.7em;
+}
+
+.top {
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  /*background: url("../images/debut_dark.png") fixed;*/
+  color: #eee;
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.top i {
+  color: #cb4444;
+}
+
+#logo img {
+  margin: 25px auto 25px auto;
+}
+
+.main {
+  padding: 200px 0;
+  background: #efefef url("../images/1.jpg") right center no-repeat;
+}
+
+@include xs {
+  .address, .phone {
+    line-height: 2em;
+  }
+  .address {
+    margin-bottom: 20px;
+  }
+  #logo {
+    display: block;
+    float: inherit;
+  }
+}
+
+#about-us {
+  padding: 50px 0;
+  background: #eee;
+  color: #333;
+  p {
+    @include justify;
+  }
+}
+
+
+
+
+.opening-times {
+  padding-bottom: 50px;
+  background: #272420;
+  h1 {
+    color: #eee;
+    font-size: 3em;
+    line-height: 1.3em;
+    letter-spacing: 0.05em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    margin: 50px 0 50px 0;
+  }
+  .moustache {
+    display: block;
+    margin: 0 auto 50px auto;
+    background-image: url("../images/moustache.svg");
+    background-repeat: no-repeat;
+    height: 36px;
+    width: 100px;
+  }
+}
+
+.time {
+  background: #135468;
+  margin: 0 20px;
+  color: #eee;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 70px;
+  font-family: 'Oswald', sans-serif;
+  padding: 0 15px;
+  font-weight: 300;
+  &.today {
+    background-color: #cb4444;
+  }
+  span {
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    letter-spacing: 0.03em;
+    font-size: 0.55em;
+    line-height: 70px;
+    float: right;
+  }
+}
+
+@include sm {
+  .opening-times {
+    background: url("../images/equipment-dark.jpg") center center fixed;
+    background-color: transparent;
+    padding: 0 0 100px 0;
+    h1 {
+      margin: 100px 0 50px 0;
+    }
+  }
+  .time {
+    width: 97px;
+    height: 97px;
+    float: left;
+    margin: 0 5px;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 0.05em;
+    line-height: 73px;
+    padding: 0;
+    span {
+      display: block;
+      letter-spacing: 0.03em;
+      font-size: 0.45em;
+      line-height: 0px;
+      float: none;
+    }
+  }
+}
+
+@include md {
+  .opening-times {
+    padding: 0 0 100px 0;
+  }
+  .time {
+  font-weight: 500;
+    margin: 0 7px;
+    line-height: 85px;
+    width: 124px;
+    height: 124px;
+    span {
+      font-size: 0.6em;
+    }
+  }
+}
+
+@include lg {
+  .opening-times {
+    padding: 0 0 120px 0;
+  }
+  .time {
+    margin: 0 10px;
+    line-height: 105px;
+    width: 147px;
+    height: 147px;
+  }
+}
